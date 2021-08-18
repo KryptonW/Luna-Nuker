@@ -39,11 +39,8 @@ try:
 except:
     print(f"     \x1b[38;5;199m[\x1b[0m~\x1b[38;5;199m] \x1b[0mFailed To Load Proxies From Proxies.txt")
 
-with open('Config.json') as f:
-    config = json.load(f)
-
-Token = config.get('Token')
-Bot = config.get('Bot')
+Token = input("Token: ")
+Bot = True
 if Bot == True:
     headers = {"Authorization": f"Bot {Token}"}
 else:
